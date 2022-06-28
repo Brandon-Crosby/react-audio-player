@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { FaPlay, FaPause } from "react-icons/fa";
 import styles from "/styles/AudioPlayer.module.css";
-// import War from "../assets/War.mp3";
+import War from "../assets/War.mp3";
+import win from "../assets/bigwin-logo.png";
 
 const AudioPlayer = () => {
   //state
@@ -12,7 +14,7 @@ const AudioPlayer = () => {
   const sound = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
   //references
   const audioPlayer = useRef(); // audio component
-  // const audioPlayer = useRef(new Audio(War));
+  // const audioPlayer = useRef(new Audio(require(".//../assets/war.mp3")));
   const progressBar = useRef(); // progress bar
   const animationRef = useRef(); // reference the animation
   // effect
@@ -63,6 +65,11 @@ const AudioPlayer = () => {
 
   return (
     <div className={styles.audioPlayer}>
+      <div className={styles.imgContainer}>
+        <Image src={require("../assets/bigwin-logo.png")} alt="big win" />
+      </div>
+      {/* <img src={require("/assets/bigwin-logo.png")} /> */}
+
       <audio ref={audioPlayer} src={sound} preload="metadata"></audio>
       {/* progress bar time */}
       <div>

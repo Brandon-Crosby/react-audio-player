@@ -12,6 +12,16 @@
   color: var(--white);
 }
 
+.imgContainer {
+  width: 150px;
+  margin-bottom: 16px;
+  align-items: center;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 2px 28px 28px rgb(0 0 0 / 20%);
+  color: var(--white);
+}
+
 .playersButton {
   display: flex;
   justify-content: center;
