@@ -1,31 +1,39 @@
-import imgSrc from "./assets/artwork.jpg";
-import imgSrc2 from "./assets/artwork2.jpg";
-import imgSrc3 from "./assets/artwork3.jpg";
-import cali from "./assets/cali-wataboi.mp3";
-import fifty from "./assets/50-tobylane.mp3";
-import iwonder from "./assets/iwonder-dreamheaven.mp3";
 
-// All of these artists are at https://pixabay.com/music/search/mood/laid%20back/
+import deep from '../assets/deep.mp3';
+import war from '../assets/war.mp3';
+import imgSrc from '../assets/bigwin-logo.png'
+import toliver from '../assets/toliver.jpeg'
+import mindsetCover from '../assets/mindset.png'
+import mindset from '../assets/mindset1.mp3';
+
+
+
 export default [
   {
-    title: "Cali",
-    artist: "Wataboi",
-    audioSrc: cali,
-    image: imgSrc,
-    color: "#00aeb0",
+    title: "Mindset",
+    artist: "Carol Dweck",
+    audioSrc: mindset,
+    chapter: 'Chapter 1',
+    coverArt: mindsetCover,
+  },
+  {
+    title: "War",
+    artist: "Jarrell Brain",
+    audioSrc: war,
+    coverArt: imgSrc,
   },
   {
     title: "50",
-    artist: "tobylane",
-    audioSrc: fifty,
-    image: imgSrc2,
-    color: "#ffb77a",
+    artist: "Don Toliver",
+    audioSrc: deep,
+    coverArt: toliver,
   },
   {
-    title: "I Wonder",
-    artist: "DreamHeaven",
-    audioSrc: iwonder,
-    image: imgSrc3,
-    color: "#5f9fff",
+    title: "50",
+    artist: "Something",
+    audioSrc: 'https://mailboxdrive.com/mp3s/20339/#:~:text=Direct%20Link%3A-,here,-Play%20Time%3A%201',
+    coverArt: deep,
   },
 ];
+// All of these artists are at https://pixabay.com/music/search/mood/laid%20back/
+
