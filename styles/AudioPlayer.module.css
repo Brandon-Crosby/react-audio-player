@@ -1,11 +1,34 @@
+.chapter {
+  display: block;
+  height: 11px;
+  background: var(--primary) !important;
+  position: absolute;
+  top: 4px;
+  left: var(--left);
+  width: var(--width);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.chapter.start {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.chapter.end {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+
 .audioPlayer {
   --primary: white;
   --secondary: rgba(0, 0, 0, 0.2)
 
-  width: 150px;
+  width: 300px;
   align-items: center;
   max-width: 350px;
-  padding: 24px;
+  padding: 24px 24px 12px;
   border-radius: 20px;
   box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2);
   margin: auto;
@@ -13,14 +36,36 @@
 }
 
 .imgContainer {
-  width: 150px;
+  width: 300px;
   margin-bottom: 16px;
   align-items: center;
-  padding: 24px;
+  padding: 4px;
   border-radius: 20px;
   box-shadow: 2px 28px 28px rgb(0 0 0 / 20%);
   color: var(--white);
 }
+
+.progressBarContainer { 
+  position: relative;
+}
+
+
+.title {
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.artist {
+  font-weight: 300;
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+
+.img { border-radius: 20px;
+max-width: 100%; }
 
 .playersButton {
   display: flex;
@@ -32,14 +77,17 @@
   display: flex;
   align-items: center;
   font-family: "Open Sans";
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
+  transition-duration: .2s;
+  margin-bottom: 4px;
 }
 
 .forwardBackward:hover {
   color: var(--primary);
   cursor: pointer;
-}
+  opacity: .5;
+  transition-duration: .5s;}
 
 .playPause {
   background: none;
@@ -50,10 +98,14 @@
   color: var(--primary);
   justify-content: center;
   align-items: center;
+  transition-duration: .2s;
+  font-size: 24px;
 }
 
 .playPause:hover {
   cursor: pointer;
+  opacity: .5;
+  transition-duration: .5s
 }
 
 .currentTime,
@@ -84,6 +136,7 @@
   width: 100%;
   height: 11px;
   outline: none;
+  cursor: pointer;
 }
 
 .progressBar::before {
